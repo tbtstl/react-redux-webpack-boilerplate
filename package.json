@@ -1,0 +1,80 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple React, Redux, React-Router boilerplate with webpack",
+  "main": "index.js",
+  "keywords": [
+    "React"
+  ],
+  "author": "Tyson Battistella",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "react-router-dom": "^4.1.1",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "redux": "^3.7.0",
+    "redux-thunk": "^2.2.0",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.4",
+    "enzyme": "^2.9.0",
+    "eslint": "^4.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "jest": "^20.0.4",
+    "json-loader": "^0.5.4",
+    "path": "^0.12.7",
+    "react-hot-loader": "^1.3.1",
+    "redux-devtools": "^3.4.0",
+    "redux-devtools-dock-monitor": "^1.1.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-devtools-log-monitor": "^1.3.0",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0",
+    "webpack-dashboard": "^0.4.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "scripts": {
+    "preinstall": "npm prune",
+    "build": "webpack --config webpack.config.prod.js --colors --env=production",
+    "dev": "webpack-dashboard -t Telmediq -- webpack-dev-server --config webpack.config.dev.js --env=development --colors --inline --progress",
+    "test": "jest",
+    "lint:js": "eslint app/ webpack.*.js --cache"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "^.+\\.(css|less)$": "identity-obj-proxy"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/(public|node_modules)/"
+    ]
+  }
+}
